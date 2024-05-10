@@ -27,7 +27,7 @@ This is a web-based weather forecast application that allows users to check the 
 
 1. Clone the repository:
     ```
-    git clone https://github.com/your-username/weather-forecast-app.git
+    git clone https://github.com/JanKulesza/weather-forecast-app.git
     ```
 
 2. Open `index.html` in your web browser.
