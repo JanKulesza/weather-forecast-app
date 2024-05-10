@@ -39,5 +39,7 @@ This is a web-based weather forecast application that allows users to check the 
 ## Planned Updates
 
 1. Enhancing user interaction with extra header buttons.
+   
 2. Improving the visual design for a better user experience.
+   
 3. Implementing user authentication and saving favorite cities.
