@@ -1,0 +1,374 @@
+:root {
+    --main-color: cornflowerblue;
+    --secondary-color: white;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.parallax {
+    background-image: url("../public/image.png");
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.parallax-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: transparent;
+    margin-top: 75px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+header img,
+header p {
+    display: inline;
+}
+
+header p,
+header h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 7rem;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
+    padding: 0;
+}
+
+.parallax button {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    bottom: 50px;
+    right: auto;
+    left: auto;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax button i {
+    font-size: 50px;
+    font-weight: 100;
+    color: var(--secondary-color);
+}
+
+.location-name {
+    width: 100%;
+    text-align: center;
+    min-height: 20px;
+    margin: 20px 0;
+}
+
+.path {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.location-name h2 {
+    color: var(--main-color);
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.weather-each-hour {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    height: auto;
+    overflow-x: auto;
+    justify-content: space-evenly;
+}
+
+.hour {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    width: 100px;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.hour p {
+    font-size: 1.75rem;
+    font-weight: 200;
+    margin: 0;
+    color: #333;
+}
+
+.hour .chance-of-rain {
+    color: var(--main-color);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    color: #888;
+}
+
+.choose-day {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.choose-day button {
+    background-color: transparent;
+    border: 0;
+    width: 50%;
+    text-align: center;
+    height: auto;
+    padding: 25px;
+    font-size: 2rem;
+    font-weight: 100;
+    border-bottom: 3px solid #cacaca;
+    color: #cacaca;
+    cursor: pointer;
+}
+
+.choose-day .focus {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.forecast {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    height: 100px;
+}
+
+.day p {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    color: #888;
+}
+
+.max-min-temp {
+    justify-content: flex-end;
+}
+
+.day p {
+    font-weight: 200;
+}
+
+.day img {
+    text-align: center;
+    height: 64px;
+    margin: 18px 0;
+}
+
+#overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.change-location-form {
+    position: fixed;
+    width: 60%;
+    min-height: 200px;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+    padding: 40px;
+    text-align: center;
+}
+
+.change-location-form h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.change-location-form input {
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    outline: none;
+    border-radius: 1.25rem 1.25rem 0 0;
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 0px;
+
+}
+
+.change-location-form input:focus {
+    box-shadow: 0px 0px 10px #999;
+}
+
+.choose,
+.close {
+    background-color: cornflowerblue;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 55px;
+    border: none;
+    float: left;
+    margin-top: 20px;
+    text-decoration: none;
+    border-bottom-left-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+    font-size: 1.15rem;
+    cursor: pointer;
+    border-bottom: 5px rgb(79, 124, 207) solid;
+    border-left: 1px rgb(79, 124, 207) solid;
+}
+
+.close {
+    background-color: #f8f4f4;
+    color: #333;
+    border-radius: 0 1.25rem 1.25rem 0;
+    border-left: 0;
+    border-bottom: 5px #999 solid;
+    border-right: 1px #999 solid;
+}
+
+.choose:active,
+.close:active {
+    border: 0;
+}
+
+.city {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+    min-height: 55px;
+    border: 1px solid #555;
+    border-top: 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.15rem;
+}
+
+.city-name {
+    display: block;
+    text-align: left;
+    width: 60%;
+    font-weight: 400;
+    color: #333;
+}
+
+.country-name {
+    display: block;
+    width: 40%;
+    text-align: right;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 650px) {
+
+    /* Styles for screens with a maximum width of 700px */
+    .day {
+        margin: 20px;
+        align-items: center;
+    }
+
+    .day p {
+        font-size: 1.25rem;
+        width: 25%;
+    }
+
+    .location-name h2 {
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+
+    .change-location-form {
+        width: 100%;
+    }
+
+    .choose-day button {
+        font-size: 1.5rem;
+    }
+
+    .hour {
+        display: flex;
+        flex-direction: column;
+        min-height: 100px;
+        width: 100px;
+        padding: 5px;
+        align-items: center;
+
+    }
+
+    .hour p {
+        font-size: 1rem;
+    }
+
+    .hour img {
+        height: 40px;
+        width: 40px;
+    }
+}
